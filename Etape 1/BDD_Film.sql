@@ -22,8 +22,8 @@ CREATE TABLE role (
 
 CREATE TABLE acteur (
  numero_acteur int NOT NULL,
- nom_acteur varchar(14) NOT NULL,
- prenom_acteur varchar(16) NOT NULL,
+ prenom_acteur varchar(14) NOT NULL,
+ nom_acteur varchar(16) NOT NULL,
  date_de_naissance date NOT NULL,
  nation_acteur VARCHAR(16) NOT NULL,
  
@@ -32,8 +32,8 @@ CREATE TABLE acteur (
 
 CREATE TABLE realisateur (
  numero_realisateur int NOT NULL,
- nom_realisateur varchar(14) NOT NULL,
- prenom_realisateur varchar(16) NOT NULL,
+ prenom_realisateur varchar(14) NOT NULL,
+ nom_realisateur varchar(16) NOT NULL,
  nation_realisateur VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (numero_realisateur)
