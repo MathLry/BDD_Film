@@ -4,16 +4,19 @@ CREATE TABLE film (
  date_de_sortie date NOT NULL,
  duree int NOT NULL,
  genre VARCHAR(20) NOT NULL,
+ numero_realisateur int NOT NULL,
  
  PRIMARY KEY (numero_film),
- FOREIGN KEY (numero_realisateur) REFERENCES film(numero_realisateur)
+ FOREIGN KEY (numero_realisateur) REFERENCES realisateur(numero_realisateur)
 );
 
 CREATE TABLE role (
  nom_du_role varchar(14) NOT NULL,
+ numero_acteur int NOT NULL,
+ numero_film int NOT NULL,
  
  PRIMARY KEY (numero_acteur, numero_film),
- FOREIGN KEY (numero_acteur) REFERENCES film(numero_acteur),
+ FOREIGN KEY (numero_acteur) REFERENCES acteur(numero_acteur),
  FOREIGN KEY (numero_film) REFERENCES film(numero_film)
 );
 
@@ -24,7 +27,7 @@ CREATE TABLE acteur (
  date_de_naissance date NOT NULL,
  nation_acteur VARCHAR(16) NOT NULL,
  
- PRIMARY KEY (numero_acteur),
+ PRIMARY KEY (numero_acteur)
 );
 
 CREATE TABLE realisateur (
@@ -33,11 +36,12 @@ CREATE TABLE realisateur (
  prenom_realisateur varchar(16) NOT NULL,
  nation_realisateur VARCHAR(16) NOT NULL,
  
- PRIMARY KEY (numero_realisateur),
+ PRIMARY KEY (numero_realisateur)
 );
 
 CREATE TABLE place (
  numero_place int NOT NULL,
+ categorie_de_la_place int NOT NULL,
  
  PRIMARY KEY (numero_place),
  FOREIGN KEY (categorie_de_la_place) REFERENCES categorie_place(categorie_de_la_place)
@@ -47,13 +51,15 @@ CREATE TABLE categorie_place (
  categorie_de_la_place int NOT NULL,
  type_place int NOT NULL,
  
- PRIMARY KEY (categorie_de_la_place),
+ PRIMARY KEY (categorie_de_la_place)
 );
 
 CREATE TABLE seance (
  numero_seance int NOT NULL,
  date_de_la_seance date NOT NULL,
  horaire TIME NOT NULL,
+ numero_film int NOT NULL,
+ categorie_de_la_seance int NOT NULL,
  
  PRIMARY KEY (numero_seance),
  FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
@@ -66,21 +72,21 @@ CREATE TABLE tarif (
  categorie_de_la_place int NOT NULL,
  
  PRIMARY KEY (categorie_de_la_seance, categorie_de_la_place),
- FOREIGN KEY (categorie_de_la_seance) REFERENCES seance(categorie_de_la_seance),
- FOREIGN KEY (categorie_de_la_place) REFERENCES place(categorie_de_la_place)
+ FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
+ FOREIGN KEY (categorie_de_la_place) REFERENCES categorie_place(categorie_de_la_place)
 );
 
 CREATE TABLE categorie_seance (
  categorie_de_la_seance int NOT NULL,
  type_seance int NOT NULL,
  
- PRIMARY KEY (numero_seance, categorie_de_la_seance),
- FOREIGN KEY (numero_seance) REFERENCES film(numero_seance),
- FOREIGN KEY (categorie_de_la_seance) REFERENCES film(categorie_de_la_seance)
+ PRIMARY KEY (categorie_de_la_seance)
 );
 
 CREATE TABLE reservation (
  nom_spectateur varchar(14) NOT NULL,
+ numero_seance int NOT NULL,
+ numero_place int NOT NULL,
  
  PRIMARY KEY (numero_seance, numero_place),
  FOREIGN KEY (numero_seance) REFERENCES seance(numero_seance),
