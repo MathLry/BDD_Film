@@ -68,6 +68,7 @@ VALUES ('Acteur principal', 1, 1),  -- Le parrain
 ('Actrice principale', 17, 6),
 ('Acteur secondaire', 18, 6),
 
+
 INSERT INTO place (numero_place, categorie_de_la_place)
 VALUES (1, 'A'),
 (2, 'A'),
