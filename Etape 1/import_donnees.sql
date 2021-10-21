@@ -35,7 +35,7 @@ VALUES (1, 'Francis', 'FORD CAPPOLA', 'USA'),
 
 
 INSERT INTO film (numero_film, titre_film, date_de_sortie, duree, genre, numero_realisateur) -- format de la date : 'AAAA-MM-JJ'
-VALUES (1, 'Le Parain', '1972-10-18', 175, 'drame, Mafia, Policier, Criminel', 1),
+VALUES (1, 'Le Parain', '1972-10-18', 175, 'Drame, Mafia, Policier, Criminel', 1),
 (2, 'Star Wars, épisode V', '1980-08-29', 124, 'Action, Aventure, Science-Fiction, Fantasy', 2),
 (3, 'Avatar', '2009-12-16', 162, 'Action, Aventure, Science-Fiction, Fantasy', 3),
 (4, 'Retour vers le futur', '1985-10-30', 176, 'Comedie, Aventure, Science-Fiction, Fantasy, Romance', 4),
@@ -105,12 +105,12 @@ VALUES ('A', 'Devant'),
 
 
 INSERT INTO seance (numero_seance, date_de_la_seance, horaire, numero_film, categorie_de_la_seance) -- format de l'horaire : 'hh:mm:ss'
-VALUES (9, '18/10/1972', '13:10:00', 1, Film),
-(7, '20/08/1980', '23:20:00', 2, Film),
-(3, '21/02/2005', '19:30:00', 3, Film),
-(43, '30/10/1985', '10:00:00', 4, Film),
-(16, '07/01/1998', '14:40:00', 5, Film),
-(23, '23/06/1999', '16:30:00', 6, Film);
+VALUES (9, '2008/10/18', '13:10:00', 1, Film),
+(7, '2009/08/20', '23:20:00', 2, Film),
+(3, '2012/02/21', '19:30:00', 3, Film),
+(43, '20015/10/30', '10:00:00', 4, Film),
+(16, '2020/01/07', '14:40:00', 5, Film),
+(23, '2017/06/23', '16:30:00', 6, Film);
 
 
 INSERT INTO categorie_seance (categorie_de_la_seance, type_seance)
