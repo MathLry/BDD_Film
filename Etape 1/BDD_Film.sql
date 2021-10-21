@@ -3,7 +3,7 @@ CREATE TABLE film (
  titre_film varchar(20) NOT NULL,
  date_de_sortie date NOT NULL,
  duree int NOT NULL,
- genre VARCHAR(20) NOT NULL,
+ genre VARCHAR(50) NOT NULL,
  numero_realisateur int NOT NULL,
  
  PRIMARY KEY (numero_film),
@@ -49,7 +49,7 @@ CREATE TABLE place (
 
 CREATE TABLE categorie_place (
  categorie_de_la_place VARCHAR(16) NOT NULL,
- type_place int NOT NULL,
+ type_place VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (categorie_de_la_place)
 );
