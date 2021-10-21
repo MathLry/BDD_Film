@@ -121,7 +121,7 @@ VALUES ('Plein tarif', '2D'),
 INSERT INTO tarif (prix, categorie_de_la_seance)
 VALUES (10,80 ||''|| ' €', 'Plein tarif'),
 (8,30 ||''|| ' €', 'Tarif reduit'),
-(7 ||''|| ' €', 'Tarif etudiant'),
+(7,00 ||''|| ' €', 'Tarif etudiant'),
 (5,90 ||''|| ' €', 'Tarif moins de 16 ans');
 
 INSERT INTO reservation (nom_spectateur, numero_seance, numero_place)
