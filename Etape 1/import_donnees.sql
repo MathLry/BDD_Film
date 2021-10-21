@@ -112,13 +112,7 @@ VALUES (9, '2008-10-18', '13:10:00', 1, 'Film'),
 
 
 INSERT INTO categorie_seance (categorie_de_la_seance, type_seance)
-VALUES ('Film', '2D'),
-('Film', '2D'),
-('Film', '2D'),
-('Film', '2D'),
-('Film', '2D'),
-('Film', '2D'),
-('Film', '2D');
+VALUES ('Film', '2D');
 
 
 INSERT INTO tarif (prix, categorie_de_la_seance, categorie_de_la_place)
@@ -136,7 +130,7 @@ VALUES ('Calvin', 7, 2),
 ('Thiel', 16, 9),
 ('Deckow', 3, 12),
 ('Johns', 7, 16),
-('Wiza',23, 1),
+('Wiza', 23, 1),
 ('Lemke', 43, 8),
 ('Schuster', 16, 9),
 ('Mueller', 9, 10);

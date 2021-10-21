@@ -78,13 +78,13 @@ CREATE TABLE tarif (
 
 CREATE TABLE categorie_seance (
  categorie_de_la_seance VARCHAR(16) NOT NULL,
- type_seance int NOT NULL,
+ type_seance VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (categorie_de_la_seance)
 );
 
 CREATE TABLE reservation (
- nom_spectateur varchar(14) NOT NULL,
+ nom_spectateur varchar(16) NOT NULL,
  numero_seance int NOT NULL,
  numero_place int NOT NULL,
  
