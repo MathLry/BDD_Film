@@ -135,6 +135,7 @@ VALUES (11.00 ||''|| ' €', 'Plein tarif', 'Devant'),
 (5.70 ||''|| ' €', 'Tarif moins de 16 ans', 'Au milieu'),
 (5.60 ||''|| ' €', 'Tarif moins de 16 ans', 'Au fond');
 
+
 INSERT INTO reservation (nom_spectateur, numero_seance, numero_place)
 VALUES ('Calvin', 7, 2),
 ('Wuckert', 7, 6),
