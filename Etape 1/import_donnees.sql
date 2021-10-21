@@ -1,4 +1,3 @@
--- ATTENTION ! j'ai inversé "prénom" et "nom" pour plus de clarté, donc voir si ca passe ou si ca casse la table...
 INSERT INTO acteur (numero_acteur, prenom_acteur, nom_acteur, date_de_naissance, nation_acteur) -- format de la la date :'AAAA-MM-JJ'
 VALUES (1, 'Al', 'PACINO', '1940-04-25', 'USA'),
 (2, 'Marlon', 'BRANDO', '1924-04-03', 'USA'),
@@ -25,7 +24,6 @@ VALUES (1, 'Al', 'PACINO', '1940-04-25', 'USA'),
 (18, 'Laurence', 'FISHBURNE', '1961-07-31', 'USA');
 
 
--- ATTENTION ! j'ai inversé "prénom" et "nom" pour plus de clarté, donc voir si ca passe ou si ca casse la table...
 INSERT INTO realisateur (numero_realisateur, prenom_realisateur, nom_realisateur, nation_realisateur)
 VALUES (1, 'Francis', 'FORD CAPPOLA', 'USA'),
 (2, 'Irvin', 'KERSHNER', 'USA'),
