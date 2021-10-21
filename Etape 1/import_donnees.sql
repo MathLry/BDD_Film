@@ -118,11 +118,23 @@ VALUES ('Plein tarif', '2D'),
 ('Tarif moins de 16 ans', '2D');
 
 
-INSERT INTO tarif (prix, categorie_de_la_seance)
-VALUES (10,80 ||''|| ' €', 'Plein tarif'),
-(8,30 ||''|| ' €', 'Tarif reduit'),
-(7 ||''|| ' €', 'Tarif etudiant'),
-(5,90 ||''|| ' €', 'Tarif moins de 16 ans');
+INSERT INTO tarif (prix, categorie_de_la_seance, categorie_de_la_seance)
+VALUES (11.00 ||''|| ' €', 'Plein tarif', 'Devant'),
+(10.90 ||''|| '€', 'Plein tarif', 'Au milieu'),
+(10.60 ||''|| ' €', 'Plein tarif', 'Au fond'),
+
+(8.60 ||''|| ' €', 'Tarif reduit', 'Devant'),
+(8.50 ||''|| ' €', 'Tarif reduit', 'Au milieu'),
+(8.30 ||''|| ' €', 'Tarif reduit', 'Au fond'),
+
+(7.10 ||''|| ' €', 'Tarif etudiant', 'Devant'),
+(7.00 ||''|| ' €', 'Tarif etudiant', 'Au milieu'),
+(6.80 ||''|| ' €', 'Tarif etudiant', 'Au fond'),
+
+(5.90 ||''|| ' €', 'Tarif moins de 16 ans', 'Devant'),
+(5.70 ||''|| ' €', 'Tarif moins de 16 ans', 'Au milieu'),
+(5.60 ||''|| ' €', 'Tarif moins de 16 ans', 'Au fond');
+
 
 INSERT INTO reservation (nom_spectateur, numero_seance, numero_place)
 VALUES ('Calvin', 7, 2),
