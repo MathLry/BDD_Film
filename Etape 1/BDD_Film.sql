@@ -69,6 +69,7 @@ CREATE TABLE seance (
 CREATE TABLE tarif (
  prix float NOT NULL,
  categorie_de_la_seance VARCHAR(20) NOT NULL,
+ categorie_de_la_place VARCHAR(20) NOT NULL,
  
  PRIMARY KEY (categorie_de_la_seance),
  FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
