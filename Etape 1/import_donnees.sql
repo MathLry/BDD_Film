@@ -105,40 +105,40 @@ VALUES ('A', 'Devant'),
 
 
 INSERT INTO seance (numero_seance, date_de_la_seance, horaire, numero_film, categorie_de_la_seance) -- format de l'horaire : 'hh:mm:ss'
-VALUES (9, '18/10/1972', '13:10:00', 1, Film),
-(7, '20/08/1980', '23:20:00', 2, Film),
-(3, '21/02/2005', '19:30:00', 3, Film),
-(43, '30/10/1985', '10:00:00', 4, Film),
-(16, '07/01/1998', '14:40:00', 5, Film),
-(23, '23/06/1999', '16:30:00', 6, Film);
+VALUES (9, '18/10/1972', '13:10:00', 1, 'Film'),
+(7, '20/08/1980', '23:20:00', 2, 'Film'),
+(3, '21/02/2005', '19:30:00', 3, 'Film'),
+(43, '30/10/1985', '10:00:00', 4, 'Film'),
+(16, '07/01/1998', '14:40:00', 5, 'Film'),
+(23, '23/06/1999', '16:30:00', 6, 'Film');
 
 
 INSERT INTO categorie_seance (categorie_de_la_seance, type_seance)
-VALUES (Film, 2D),
-(Film, 2D),
-(Film, 2D),
-(Film, 2D),
-(Film, 2D),
-(Film, 2D),
-(Film, 2D);
+VALUES ('Film', '2D'),
+('Film', '2D'),
+('Film', '2D'),
+('Film', '2D'),
+('Film', '2D'),
+('Film', '2D'),
+('Film', '2D');
 
 
 INSERT INTO tarif (prix, categorie_de_la_seance, categorie_de_la_place)
-VALUES (10 ||''|| ' €', Film, 'A'),
-(12 ||''|| ' €', Film, 'B'),
-(15 ||''|| ' €', Film, 'D'),
-(11 ||''|| ' €', Film, ' B'),
-(14 ||''|| ' €', Film, 'D'),
-(10 ||''|| ' €', Film, 'C'),
-(5 ||''|| ' €', Film, 'A');
+VALUES (10 ||''|| ' €', 'Film', 'A'),
+(12 ||''|| ' €', 'Film', 'B'),
+(15 ||''|| ' €', 'Film', 'D'),
+(11 ||''|| ' €', 'Film', ' B'),
+(14 ||''|| ' €', 'Film', 'D'),
+(10 ||''|| ' €', 'Film', 'C'),
+(5 ||''|| ' €', 'Film', 'A');
 
 INSERT INTO reservation (nom_spectateur, numero_seance, numero_place)
-VALUES (Calvin, 7, 2),
-(Wuckert, 7, 6),
-(Thiel, 16, 9),
-(Deckow, 3, 12),
-(Johns, 7, 16),
-(Wiza,23, 1),
-(Lemke, 43, 8),
-(Schuster, 16, 9),
-(Mueller, 9, 10);
+VALUES ('Calvin', 7, 2),
+('Wuckert', 7, 6),
+('Thiel', 16, 9),
+('Deckow', 3, 12),
+('Johns', 7, 16),
+('Wiza',23, 1),
+('Lemke', 43, 8),
+('Schuster', 16, 9),
+('Mueller', 9, 10);
