@@ -105,12 +105,12 @@ VALUES ('A', 'Devant'),
 
 
 INSERT INTO seance (numero_seance, date_de_la_seance, horaire, numero_film, categorie_de_la_seance) -- format de l'horaire : 'hh:mm:ss'
-VALUES (9, '2008-10-18', '13:10:00', 1, Film),
-(7, '2009-08-20', '23:20:00', 2, Film),
-(3, '2012-02-21', '19:30:00', 3, Film),
-(43, '2015-10-30', '10:00:00', 4, Film),
-(16, '2020-01-07', '14:40:00', 5, Film),
-(23, '2017-06-23', '16:30:00', 6, Film);
+VALUES (9, '2008-10-18', '13:10:00', 1, 'Film'),
+(7, '2009-08-20', '23:20:00', 2, 'Film'),
+(3, '2012-02-21', '19:30:00', 3, 'Film'),
+(43, '2015-10-30', '10:00:00', 4, 'Film'),
+(16, '2020-01-07', '14:40:00', 5, 'Film'),
+(23, '2017-06-23', '16:30:00', 6, 'Film');
 
 
 INSERT INTO categorie_seance (categorie_de_la_seance, type_seance)
