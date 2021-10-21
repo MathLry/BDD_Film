@@ -78,7 +78,7 @@ CREATE TABLE tarif (
 
 CREATE TABLE categorie_seance (
  categorie_de_la_seance VARCHAR(16) NOT NULL,
- type_seance int NOT NULL,
+ type_seance VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (categorie_de_la_seance)
 );
