@@ -42,29 +42,29 @@ VALUES (1, 'Le Parain', '1972-10-18', 175, 'Drame, Mafia, Policier, Criminel', 1
 
 
 INSERT INTO role (nom_du_role, numero_acteur, numero_film)
-VALUES ('Acteur principal', 1, 1),  -- Le parrain
-('Actrice secondaire', 2, 1),
-('Acteur secondaire', 3, 1),
+VALUES ('Michael Corleone', 1, 1),  -- Le parrain
+('Vito Corleone', 2, 1),
+('Vito Corleone', 3, 1),
 
-('Acteur principal', 4, 2),   -- Star Wars    
-('Acteur secondaire', 5, 2),
-('Acteur secondaire', 6, 2),
+('Luke Skywalker', 4, 2),   -- Star Wars    
+('Leia Organa', 5, 2),
+('Han Solo', 6, 2),
 
-('Actrice principale', 7, 3),   -- Avatar
-('Acteur secondaire', 8, 3),
-('Actrice secondaire', 9, 3),
+('Neytiri', 7, 3),   -- Avatar
+('Jake Sully, and Tommy', 8, 3),
+('Grace', 9, 3),
 
-('Acteur principal', 10, 4),    -- Retour vers le futur
-('Acteur principal', 11, 4),
-('Actrice secondaire', 12, 4),
+('Marty McFly', 10, 4),    -- Retour vers le futur
+('Dr. Emmett Brown', 11, 4),
+('Lorraine Baines', 12, 4),
 
-('Actrice principal', 13, 5),   -- Titanic
-('Acteur principal', 14, 5),
-('Acteur secondaire', 15, 5),
+('Rose DeWitt Bukater', 13, 5),   -- Titanic
+('Jack Dawson', 14, 5),
+('Caledon Hockley', 15, 5),
 
-('Acteur principal', 16, 6),    -- Matrix
-('Actrice principale', 17, 6),
-('Acteur secondaire', 18, 6);
+('Neo', 16, 6),    -- Matrix
+('Trinity', 17, 6),
+('Morpheus', 18, 6);
 
 
 INSERT INTO place (numero_place, categorie_de_la_place)

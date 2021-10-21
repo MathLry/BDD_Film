@@ -11,7 +11,7 @@ CREATE TABLE film (
 );
 
 CREATE TABLE role (
- nom_du_role varchar(14) NOT NULL,
+ nom_du_role varchar(30) NOT NULL,
  numero_acteur int NOT NULL,
  numero_film int NOT NULL,
  
