@@ -96,44 +96,54 @@ VALUES (1, 'A'),
 
 
 INSERT INTO categorie_place (categorie_de_la_place, type_place)
-VALUES ('A', 'Devant'),
-('B', 'Au milieu'),
-('C', 'Sur les Bords'),
-('D', 'Au fond');
+VALUES ('A', 'Plein tarif'),
+('B', 'Tarif reduit'),
+('C', 'Tarif etudiant'),
+('D', 'Tarif moins de 16 ans');
 
 
 INSERT INTO seance (numero_seance, date_de_la_seance, horaire, numero_film, categorie_de_la_seance) -- format de l'horaire : 'hh:mm:ss'
-VALUES (9, '2008-10-18', '13:10:00', 1, 'Film'),
-(7, '2009-08-20', '23:20:00', 2, 'Film'),
-(3, '2012-02-21', '19:30:00', 3, 'Film'),
-(43, '2015-10-30', '10:00:00', 4, 'Film'),
-(16, '2020-01-07', '14:40:00', 5, 'Film'),
-(23, '2017-06-23', '16:30:00', 6, 'Film');
+VALUES (9, '2008-10-18', '13:10:00', 1),
+(7, '2009-08-20', '23:20:00', 2),
+(3, '2012-02-21', '19:30:00', 3),
+(43, '2015-10-30', '10:00:00', 4),
+(16, '2020-01-07', '14:40:00', 5),
+(23, '2017-06-23', '16:30:00', 6);
 
 
 INSERT INTO categorie_seance (categorie_de_la_seance, type_seance)
-VALUES ('Plein tarif', '2D'),
-('Tarif reduit', '2D'),
-('Tarif etudiant', '2D'),
-('Tarif moins de 16 ans', '2D');
+VALUES (1, '2D'), -- VF
+(2, '3D'), -- VF
+(3, '4D'), -- VF
+(4, 'VO'),
+(5, 'VOSTFR');
 
 
 INSERT INTO tarif (prix, categorie_de_la_seance, categorie_de_la_place)
-VALUES (11.00, 'Plein tarif', 'Devant'),
-(10.90, 'Plein tarif', 'Au milieu'),
-(10.60, 'Plein tarif', 'Au fond'),
+VALUES (11.00, 1, 'A'),
+(9.00, 1, 'B'),
+(7.00, 1, 'C'),
+(5.90, 1, 'D'),
 
-(8.60, 'Tarif reduit', 'Devant'),
-(8.50, 'Tarif reduit', 'Au milieu'),
-(8.30, 'Tarif reduit', 'Au fond'),
+(12.60, 2, 'A'),
+(10.60, 2, 'B'),
+(8.00, 2, 'C'),
+(6.90, 2, 'D'),
 
-(7.10, 'Tarif etudiant', 'Devant'),
-(7.00, 'Tarif etudiant', 'Au milieu'),
-(6.80, 'Tarif etudiant', 'Au fond'),
+(13.20, 3, 'A'),
+(11.20, 3, 'B'),
+(8.60, 3, 'C'),
+(7.50, 2, 'D'),
 
-(5.90, 'Tarif moins de 16 ans', 'Devant'),
-(5.70, 'Tarif moins de 16 ans', 'Au milieu'),
-(5.60, 'Tarif moins de 16 ans', 'Au fond');
+(11.10, 4, 'A'),
+(9.10, 4, 'B'),
+(7.10, 4, 'C'),
+(6.00, 2, 'D'),
+
+(11.05, 5, 'A'),
+(9.05, 5, 'B'),
+(7.05, 2, 'C'),
+(5.95, 5, 'D');
 
 
 INSERT INTO reservation (nom_spectateur, numero_seance, numero_place)
