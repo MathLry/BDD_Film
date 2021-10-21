@@ -124,13 +124,13 @@ VALUES (Film, 2D),
 
 
 INSERT INTO tarif (prix, categorie_de_la_seance, categorie_de_la_place)
-VALUES ('10€', Film, 'A'),
-('12€', Film, 'B'),
-('15€', Film, 'D'),
-('11€', Film, ' B'),
-('14€', Film, 'D'),
-('10€', Film, 'C'),
-('5€', Film, 'A');
+VALUES (10 ||''|| ' €', Film, 'A'),
+(12 ||''|| ' €', Film, 'B'),
+(15 ||''|| ' €', Film, 'D'),
+(11 ||''|| ' €', Film, ' B'),
+(14 ||''|| ' €', Film, 'D'),
+(10 ||''|| ' €', Film, 'C'),
+(5 ||''|| ' €', Film, 'A');
 
 INSERT INTO reservation (nom_spectateur, numero_seance, numero_place)
 VALUES (Calvin, 7, 2),
