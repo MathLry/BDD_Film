@@ -41,14 +41,14 @@ CREATE TABLE realisateur (
 
 CREATE TABLE place (
  numero_place int NOT NULL,
- categorie_de_la_place int NOT NULL,
+ categorie_de_la_place VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (numero_place),
  FOREIGN KEY (categorie_de_la_place) REFERENCES categorie_place(categorie_de_la_place)
 );
 
 CREATE TABLE categorie_place (
- categorie_de_la_place int NOT NULL,
+ categorie_de_la_place VARCHAR(16) NOT NULL,
  type_place int NOT NULL,
  
  PRIMARY KEY (categorie_de_la_place)
@@ -59,7 +59,7 @@ CREATE TABLE seance (
  date_de_la_seance date NOT NULL,
  horaire TIME NOT NULL,
  numero_film int NOT NULL,
- categorie_de_la_seance int NOT NULL,
+ categorie_de_la_seance VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (numero_seance),
  FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
@@ -68,8 +68,8 @@ CREATE TABLE seance (
 
 CREATE TABLE tarif (
  prix int NOT NULL,
- categorie_de_la_seance int NOT NULL,
- categorie_de_la_place int NOT NULL,
+ categorie_de_la_seance VARCHAR(16) NOT NULL,
+ categorie_de_la_place VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (categorie_de_la_seance, categorie_de_la_place),
  FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
@@ -77,7 +77,7 @@ CREATE TABLE tarif (
 );
 
 CREATE TABLE categorie_seance (
- categorie_de_la_seance int NOT NULL,
+ categorie_de_la_seance VARCHAR(16) NOT NULL,
  type_seance int NOT NULL,
  
  PRIMARY KEY (categorie_de_la_seance)
