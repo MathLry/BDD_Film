@@ -112,17 +112,17 @@ VALUES (9, '2008-10-18', '13:10:00', 1, 'Film'),
 
 
 INSERT INTO categorie_seance (categorie_de_la_seance, type_seance)
-VALUES ('Film', '2D');
+VALUES ('Plein tarif', '2D'),
+('Tarif reduit', '2D'),
+('Tarif etudiant', '2D'),
+('Tarif moins de 16 ans', '2D');
 
 
-INSERT INTO tarif (prix, categorie_de_la_seance, categorie_de_la_place)
-VALUES (10 ||''|| ' €', 'Film', 'A'),
-(12 ||''|| ' €', 'Film', 'B'),
-(15 ||''|| ' €', 'Film', 'D'),
-(11 ||''|| ' €', 'Film', ' B'),
-(14 ||''|| ' €', 'Film', 'D'),
-(10 ||''|| ' €', 'Film', 'C'),
-(5 ||''|| ' €', 'Film', 'A');
+INSERT INTO tarif (prix, categorie_de_la_seance)
+VALUES (10,80 ||''|| ' €', 'Plein tarif'),
+(8,30 ||''|| ' €', 'Tarif reduit'),
+(7 ||''|| ' €', 'Tarif etudiant'),
+(5,90 ||''|| ' €', 'Tarif moins de 16 ans');
 
 INSERT INTO reservation (nom_spectateur, numero_seance, numero_place)
 VALUES ('Calvin', 7, 2),

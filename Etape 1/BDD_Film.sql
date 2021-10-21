@@ -59,7 +59,7 @@ CREATE TABLE seance (
  date_de_la_seance date NOT NULL,
  horaire TIME NOT NULL,
  numero_film int NOT NULL,
- categorie_de_la_seance VARCHAR(16) NOT NULL,
+ categorie_de_la_seance VARCHAR(20) NOT NULL,
  
  PRIMARY KEY (numero_seance),
  FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
@@ -67,17 +67,15 @@ CREATE TABLE seance (
 );
 
 CREATE TABLE tarif (
- prix int NOT NULL,
- categorie_de_la_seance VARCHAR(16) NOT NULL,
- categorie_de_la_place VARCHAR(16) NOT NULL,
+ prix float NOT NULL,
+ categorie_de_la_seance VARCHAR(20) NOT NULL,
  
- PRIMARY KEY (categorie_de_la_seance, categorie_de_la_place),
- FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
- FOREIGN KEY (categorie_de_la_place) REFERENCES categorie_place(categorie_de_la_place)
+ PRIMARY KEY (categorie_de_la_seance),
+ FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance)
 );
 
 CREATE TABLE categorie_seance (
- categorie_de_la_seance VARCHAR(16) NOT NULL,
+ categorie_de_la_seance VARCHAR(20) NOT NULL,
  type_seance VARCHAR(16) NOT NULL,
  
  PRIMARY KEY (categorie_de_la_seance)
@@ -88,7 +86,7 @@ CREATE TABLE reservation (
  numero_seance int NOT NULL,
  numero_place int NOT NULL,
  
- PRIMARY KEY (numero_seance, numero_place),
+ PRIMARY KEY (nom_spectateur),
  FOREIGN KEY (numero_seance) REFERENCES seance(numero_seance),
  FOREIGN KEY (numero_place) REFERENCES place(numero_place)
 );
