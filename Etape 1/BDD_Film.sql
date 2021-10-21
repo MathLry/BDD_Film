@@ -88,7 +88,7 @@ CREATE TABLE reservation (
  numero_seance int NOT NULL,
  numero_place int NOT NULL,
  
- PRIMARY KEY (numero_seance, numero_place),
+ PRIMARY KEY (nom_spectateur),
  FOREIGN KEY (numero_seance) REFERENCES seance(numero_seance),
  FOREIGN KEY (numero_place) REFERENCES place(numero_place)
 );
