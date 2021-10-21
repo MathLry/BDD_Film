@@ -66,7 +66,7 @@ VALUES ('Acteur principal', 1, 1),  -- Le parrain
 
 ('Acteur principal', 16, 6),    -- Matrix
 ('Actrice principale', 17, 6),
-('Acteur secondaire', 18, 6),
+('Acteur secondaire', 18, 6);
 
 
 INSERT INTO place (numero_place, categorie_de_la_place)
