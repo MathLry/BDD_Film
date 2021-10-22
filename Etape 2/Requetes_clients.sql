@@ -10,9 +10,11 @@ WHERE numero_acteur IN (
 )
 
 -- requete n°2
-SELECT film.titre_film as list_film
+SELECT film.titre_film AS list_film, prix, horaire
 FROM film
-WHERE seance = > '18' AND tarif = < '10'
+INNER JOIN seance ON seance.numero_film = film.numero_film
+INNER JOIN tarif ON tarif.categorie_de_la_seance = seance.categorie_de_la_seance
+WHERE seance.horaire >= '18:00:00' AND tarif.prix <= '10'
 
 -- requete n°3
 SELECT role.nom_du_role
@@ -26,6 +28,11 @@ WHERE acteur.numero_acteur = (
 ORDER BY role.nom_du_role ASC
 
 -- requete n°4
+SELECT seance.date_de_la_seance AS date, seance.horaire AS horaire
+FROM seance
+INNER JOIN film ON film.numero_film = seance.numero_film
+WHERE film.numero_film = 6
+ORDER BY seance.horaire ASC, seance.date_de_la_seance DESC
 
 -- requete n°5
 SELECT COUNT(DISTINCT nom_acteur) AS nombre_acteur
