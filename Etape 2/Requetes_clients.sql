@@ -17,8 +17,9 @@ FROM film
 -- requete n°3
 SELECT role.nom_du_role 
 FROM role
+INNER JOIN role ON role.numero_acteur = acteur.numero_acteur
 WHERE acteur.numero_acteur = 4
-ORDER BY acteur.nom_du_role ASC
+ORDER BY role.nom_du_role ASC
 
 -- requete n°4
 
