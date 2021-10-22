@@ -29,7 +29,8 @@ VALUES (1, 'Francis', 'FORD CAPPOLA', 'USA'),
 (2, 'Irvin', 'KERSHNER', 'USA'),
 (3, 'James', 'Cameron', 'CAN'),
 (4, 'Robert', 'ZEMECKIS', 'USA'),
-(5, 'Lana & Lilly', 'WASHOWSKI', 'USA');
+(5, 'Lana & Lilly', 'WASHOWSKI', 'USA'),
+(6, 'Richard', 'MARQUAND', 'GB');
 
 
 INSERT INTO film (numero_film, titre_film, date_de_sortie, duree, genre, numero_realisateur) -- format de la date : 'AAAA-MM-JJ'
@@ -38,7 +39,8 @@ VALUES (1, 'Le Parain', '1972-10-18', 175, 'Drame, Mafia, Policier, Criminel', 1
 (3, 'Avatar', '2009-12-16', 162, 'Action, Aventure, Science-Fiction, Fantasy', 3),
 (4, 'Retour vers le futur', '1985-10-30', 176, 'Comedie, Aventure, Science-Fiction, Fantasy, Romance', 4),
 (5, 'Titanic', '1998-01-07', 194, 'Drame, Catastrophe, Drame historique, Romance', 3),
-(6, 'Matrix', '1999-06-23', 136, 'Action, Aventure, Science-Fiction, Fantasy', 5);
+(6, 'Matrix', '1999-06-23', 136, 'Action, Aventure, Science-Fiction, Fantasy', 5),
+(7, 'Star Wars VI', '1983-05-12', 134, 'Action, Aventure, Science-Fiction, Fantasy', 6);
 
 
 INSERT INTO role (nom_du_role, numero_acteur, numero_film)
@@ -46,7 +48,7 @@ VALUES ('Michael Corleone', 1, 1),  -- Le parrain
 ('Vito Corleone', 2, 1),
 ('Vito Corleone', 3, 1),
 
-('Luke Skywalker', 4, 2),   -- Star Wars    
+('Luke Skywalker', 4, 2),   -- Star Wars v
 ('Leia Organa', 5, 2),
 ('Han Solo', 6, 2),
 
@@ -64,7 +66,11 @@ VALUES ('Michael Corleone', 1, 1),  -- Le parrain
 
 ('Neo', 16, 6),    -- Matrix
 ('Trinity', 17, 6),
-('Morpheus', 18, 6);
+('Morpheus', 18, 6),
+
+('Luke Skywalker', 4, 7),   -- Star Wars VI
+('Leia Organa', 5, 7),
+('Han Solo', 6, 7);
 
 
 INSERT INTO place (numero_place, categorie_de_la_place)
