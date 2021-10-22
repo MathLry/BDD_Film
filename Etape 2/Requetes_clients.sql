@@ -15,7 +15,10 @@ FROM film
 
 
 -- requete n°3
-
+SELECT role.nom_du_role 
+FROM role
+WHERE acteur.numero_acteur = 4
+ORDER BY acteur.nom_du_role ASC
 
 -- requete n°4
 
