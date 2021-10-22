@@ -15,10 +15,14 @@ FROM film
 WHERE seance = > '18' AND tarif = < '10'
 
 -- requete n°3
-SELECT role.nom_du_role 
+SELECT role.nom_du_role
 FROM role
-INNER JOIN role ON role.numero_acteur = acteur.numero_acteur
-WHERE acteur.numero_acteur = 4
+INNER JOIN acteur ON role.numero_acteur = acteur.numero_acteur
+WHERE acteur.numero_acteur = (
+	SELECT numero_acteur
+	FROM acteur
+	WHERE numero_acteur = 4
+)
 ORDER BY role.nom_du_role ASC
 
 -- requete n°4
