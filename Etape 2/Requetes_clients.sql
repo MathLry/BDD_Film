@@ -10,9 +10,9 @@ WHERE numero_acteur IN (
 )
 
 -- requete n°2
-SELECT film.titre_film
+SELECT film.titre_film as list_film
 FROM film
-
+WHERE seance = > '18' AND tarif = < '10'
 
 -- requete n°3
 SELECT role.nom_du_role 
