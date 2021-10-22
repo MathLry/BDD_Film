@@ -31,7 +31,7 @@ ORDER BY role.nom_du_role ASC
 SELECT seance.date_de_la_seance AS date, seance.horaire AS horaire
 FROM seance
 INNER JOIN film ON film.numero_film = seance.numero_film
-WHERE film.numero_film = 6
+WHERE film.numero_film = 7
 ORDER BY seance.horaire ASC, seance.date_de_la_seance DESC
 
 -- requete n°5
