@@ -35,6 +35,7 @@ FROM acteur
 
 -- requete n°7
 
+
 -- requete n°8
 
 -- requete n°9
