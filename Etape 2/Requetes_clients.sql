@@ -63,14 +63,15 @@ INNER JOIN role ON role.numero_acteur = acteur.numero_acteur
 GROUP BY role.numero_acteur
 ORDER BY COUNT(role.numero_acteur) DESC
 
--- requete n°9	(A REVOIR)
+-- requete n°9	(OK)
 CREATE VIEW IF NOT EXISTS liste_film_acteur AS
-SELECT prenom_acteur || ' ' || nom_acteur AS Acteur, COUNT(seance.numero_seance) AS Nombre de séances
+SELECT prenom_acteur || ' ' || nom_acteur AS Acteur, COUNT(seance.numero_seance) AS 'Nombre de séances'
 FROM acteur
 INNER JOIN role ON role.numero_acteur = acteur.numero_acteur
 INNER JOIN film ON film.numero_film = role.numero_film
 INNER JOIN seance ON film.numero_film = seance.numero_film
-WHERE film.numero_film = role.numero_film;
+WHERE film.numero_film = role.numero_film
+GROUP BY acteur.numero_acteur;
 
 -- requete n°10	(A REVOIR)
 CREATE TRIGGER IF NOT EXISTS trigger_categorie_speciale
