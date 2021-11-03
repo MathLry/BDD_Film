@@ -80,3 +80,14 @@ BEGIN
 	reservation.catégorie_de_la_place := :'E'	-:'D'
 	DBMS_OUTPUT.PUT_LINE('La catégorie de la place 1 est maintenant en :' || reservation.categorie_de_la_place);
 END;
+
+-- requete n°10	(AUTRE VARIANTE)
+CREATE TRIGGER IF NOT EXISTS trigger_categorie_speciale
+AFTER INSERT ON reservation
+FOR EACH ROW
+WHEN (new.numero_place = 1)
+BEGIN
+	UPDATE reservation
+    SET catégorie_de_la_place = 'E'
+    WHERE reservation.numero_place = 1;
+END;
