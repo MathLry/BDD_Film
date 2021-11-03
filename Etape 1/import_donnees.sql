@@ -5,10 +5,10 @@ VALUES (1, 'Al', 'PACINO', '1940-04-25', 'USA'),
 (4, 'Mark', 'HAMILL', '1951-09-25', 'USA'),
 (5, 'Carrie', 'FISHER', '1956-10-21', 'USA'),
 (6, 'Harison', 'FORD', '1942-07-13', 'USA'),
-(7, 'Zoe', 'SALDANA', '1978-06-19', 'GB'), -- Grande Bretagne
+(7, 'Zoe', 'SALDANA', '1978-06-19', 'GB'), 
 (8, 'Sam', 'WORTHINGTON', '1976-08-02', 'GB'),
 (9, 'Sigourney', 'WEAVER', '1949-09-08', 'USA'),
-(10, 'Michael Andrew', 'FOX', '1961-06-09', 'CAN'), -- Canada
+(10, 'Michael Andrew', 'FOX', '1961-06-09', 'CAN'), 
 (11, 'Christopher', 'LLOYD', '1938-10-22', 'USA'),
 (12, 'Lea', 'THOMPSON', '1961-05-31', 'USA'),
 (13, 'Kate', 'WINSLET', '1975-10-05', 'GB'),
