@@ -105,12 +105,6 @@ VALUES (1, 'A'),
 (15, 'D'),
 (16, 'D');
 
--- Voici le plan de la salle :
---  1   2   3   4
---  5   6   7   8
---  9   10  11  12
---  13  14  15  16
-
 
 INSERT INTO categorie_place (categorie_de_la_place, type_place)
 VALUES ('A', 'Plein tarif'),
