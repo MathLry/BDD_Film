@@ -18,7 +18,9 @@ VALUES (1, 'Al', 'PACINO', '1940-04-25', 'USA'),
 (17, 'Carrie-Anne', 'MOSS', '1967-08-21', 'CAN'),
 (18, 'Laurence', 'FISHBURNE', '1961-07-31', 'USA'),
 (19, 'Colin', 'FARRELL', '1976-05-31', 'IRL'),
-(20, 'Bridget', 'MOYNAHAN', '1971-04-28', 'USA');
+(20, 'Bridget', 'MOYNAHAN', '1971-04-28', 'USA'),
+(21, 'Gabriel', 'BATEMAN', '2004-09-10', 'USA'),
+(22, 'Brian', 'TYREE HENRI', '1982-03-31', 'USA');
 
 
 INSERT INTO realisateur (numero_realisateur, prenom_realisateur, nom_realisateur, nation_realisateur)
@@ -28,7 +30,8 @@ VALUES (1, 'Francis', 'FORD CAPPOLA', 'USA'),
 (4, 'Robert', 'ZEMECKIS', 'USA'),
 (5, 'Lana & Lilly', 'WASHOWSKI', 'USA'),
 (6, 'Richard', 'MARQUAND', 'GB'),
-(7, 'Roger', 'DONALDSON', 'AU');
+(7, 'Roger', 'DONALDSON', 'AU'),
+(8, 'Lars', 'KLEVBERG', 'NO');
 
 
 INSERT INTO film (numero_film, titre_film, date_de_sortie, duree, genre, numero_realisateur) -- format de la date : 'AAAA-MM-JJ'
@@ -39,7 +42,8 @@ VALUES (1, 'Le Parain', '1972-10-18', 175, 'Drame, Mafia, Policier, Criminel', 1
 (5, 'Titanic', '1998-01-07', 194, 'Drame, Catastrophe, Drame historique, Romance', 3),
 (6, 'Matrix', '1999-06-23', 136, 'Action, Aventure, Science-Fiction, Fantasy', 5),
 (7, 'Star Wars VI', '1983-05-12', 134, 'Action, Aventure, Science-Fiction, Fantasy', 6),
-(8, 'La Recrue', '2003-01-31', 115, 'Espionnage', 7);
+(8, 'La Recrue', '2003-01-31', 115, 'Espionnage', 7),
+(9, 'La Poupée du mal', '2019-06-19', 90, 'Horreur, Thriller', 8);
 
 
 INSERT INTO role (nom_du_role, numero_acteur, numero_film)
@@ -73,7 +77,11 @@ VALUES ('Michael Corleone', 1, 1),  -- Le parrain
 
 ('Walter Burke', 1, 8),   -- La Recrue
 ('James Clayton', 19, 8),
-('Layla Moore', 20, 8);
+('Layla Moore', 20, 8),
+
+('Andy Barclay', 21, 9),   -- child's play : la poupée du mal
+('Chucky', 4, 9),
+('Mike Norris', 22, 9);
 
 
 INSERT INTO place (numero_place, categorie_de_la_place)
