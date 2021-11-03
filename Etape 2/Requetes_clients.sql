@@ -75,7 +75,7 @@ CREATE TRIGGER IF NOT EXISTS trigger_categorie_speciale
 UPDATE ON reservation
 INNER JOIN place ON place.numero_place = reservation.numero_place
 INNER JOIN categorie_place ON place.categorie_de_la_place = categorie_place.categorie_de_la_place
-WHEN (reservation.numero_place = 1 AND NOT NULL)
+WHEN (reservation.numero_place = 1)
 BEGIN
 	reservation.catégorie_de_la_place := :'E'	-:'D'
 	DBMS_OUTPUT.PUT_LINE('La catégorie de la place 1 est maintenant en :' || reservation.categorie_de_la_place);
