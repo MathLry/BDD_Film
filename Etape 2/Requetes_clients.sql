@@ -1,13 +1,10 @@
 -- requete n°1	(OK)
-SELECT DISTINCT seance.date_de_la_seance 
+SELECT DISTINCT acteur.numero_acteur, seance.date_de_la_seance 
 FROM seance
 INNER JOIN film ON seance.numero_film = film.numero_film
 INNER JOIN role ON role.numero_film = film.numero_film
 INNER JOIN acteur ON acteur.numero_acteur = role.numero_acteur
-WHERE numero_acteur IN (
-    SELECT numero_acteur
-    WHERE numero_acteur = 1
-)
+WHERE acteur.numero_acteur = 1
 
 -- requete n°2	(OK)
 SELECT film.titre_film AS list_film, prix, horaire
