@@ -73,7 +73,7 @@ CREATE TABLE tarif (
  
  PRIMARY KEY (prix),
  FOREIGN KEY (categorie_de_la_seance) REFERENCES categorie_seance(categorie_de_la_seance),
- FOREIGN KEY (categorie_de_la_place) REFERENCES categorie_seance(categorie_de_la_place)
+ FOREIGN KEY (categorie_de_la_place) REFERENCES categorie_place(categorie_de_la_place)
 );
 
 CREATE TABLE categorie_seance (
