@@ -80,9 +80,7 @@ AFTER INSERT ON reservation
 FOR EACH ROW
 WHEN (new.reservation.numero_place = 1)
 BEGIN
-	UPDATE categorie_de_la_place
-    SET catégorie_de_la_place = 'E'
-    FROM place
-	INNER JOIN categorie_place ON place.categorie_de_la_place = categorie_place.categorie_de_la_place 
+	UPDATE place
+    SET catégorie_de_la_place = 'E' 
     WHERE place.numero_place = 1;
 END;
